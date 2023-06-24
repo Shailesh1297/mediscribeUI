@@ -1,0 +1,10 @@
+<div class="d-flex">
+    <div class="p-1">
+        <h1 class="text-center" (click)="show()">{{ title }}</h1>
+    </div>
+    <div class="flex-grow-1">
+    </div>
+    <div *ngIf="user.isLoggedIn" class="p-1">
+        <button (click)="logout()" class="btn btn-sm btn-secondary">Logout</button>
+    </div>
+</div>
