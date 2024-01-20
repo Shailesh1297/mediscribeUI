@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
       if (resp.code === 1) {
         this.localStorage.setItem('accessToken',resp.data.token);
         this.user.setLoggedIn = true;
+        this.toast.show({message: 'Logged In Successfully!',type:'SUCCESS'});
         this.test();
       }
     })
@@ -42,6 +43,7 @@ export class LoginComponent implements OnInit {
   test() {
     this.user.fetchUserDetails().subscribe(resp => {
       console.log(resp);
+      this.user.setUser = resp.data;
       this.router.navigate(['home'],{replaceUrl: true});
     });
       

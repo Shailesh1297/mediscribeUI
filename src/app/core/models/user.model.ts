@@ -1,7 +1,7 @@
 export interface User {
     userId: string;
-    firstName: string;
-    lastName: string;
+    firstname: string;
+    lastname: string;
     username: string;
     roles:[{[name: string]: string}],
     tokenExpired: boolean;
