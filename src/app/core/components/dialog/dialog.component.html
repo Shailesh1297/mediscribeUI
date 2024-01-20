@@ -1,0 +1,8 @@
+<h1 class="text-center" mat-dialog-title>{{ data.header }}</h1>
+<div mat-dialog-content>
+    <p>{{ data.message }}</p>
+</div>
+<div class="d-flex justify-content-around" mat-dialog-actions>
+    <button class="btn btn-success" mat-button (click)="onPositiveClick()">{{data.positiveLabel}}</button>
+    <button class="btn btn-danger" mat-button (click)="onNegativeClick()">{{data.negativeLabel }}</button>
+</div>

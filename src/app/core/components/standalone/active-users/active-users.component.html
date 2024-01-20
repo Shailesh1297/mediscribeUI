@@ -1,0 +1,10 @@
+<h4>Active Users</h4>
+<mat-form-field>
+  <mat-label>Selected User</mat-label>
+  <mat-select [value]="selectedUser" (selectionChange)="onActiveUserChange($event)">
+    <mat-option [value]="null">None</mat-option>
+    <mat-option *ngFor="let user of activeUsers" [value]="user">
+      {{user.firstname }} {{ user.lastname }} <em *ngIf="streamers.has(user.userId)" class="fa-solid fa-tower-broadcast text-success"></em>
+    </mat-option>
+  </mat-select>
+</mat-form-field>
